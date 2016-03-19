@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent" >
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical" >
+
+		<TableLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:stretchColumns="2" >
+
+			<TableRow style="@style/TableRow" >
+
+				<TextView
+					style="@style/Label"
+					android:text="创建者" />
+
+				<View style="@style/HDivider" />
+
+				<TextView
+					android:id="@+id/tv_creator"
+					style="@style/TV_UserName" />
+			</TableRow>
+
+			<TableRow style="@style/TableRow" >
+
+				<TextView
+					style="@style/Label"
+					android:text="标题" />
+
+				<View style="@style/HDivider" />
+
+				<TextView
+					android:id="@+id/tv_name"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="加载中..." />
+			</TableRow>
+
+			<TableRow style="@style/TableRow" >
+
+				<TextView
+					style="@style/Label"
+					android:text="创建时间" />
+
+				<View style="@style/HDivider" />
+
+				<TextView
+					android:id="@+id/tv_createTime"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="加载中..." />
+			</TableRow>
+		</TableLayout>
+
+		<Button
+			android:id="@+id/btn_view_in_sjtujwc"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:enabled="false"
+			android:text="去交大教务处查看" />
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:text="内容"
+			android:textSize="18sp" />
+
+		<WebView
+			android:id="@+id/wv_content"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent" />
+	</LinearLayout>
+
+</ScrollView>

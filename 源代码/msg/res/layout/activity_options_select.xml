@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical" >
+
+	<Spinner
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:entries="@array/msg_types"
+		android:gravity="center_horizontal"
+		android:prompt="@string/msg_type_prompt"
+		android:spinnerMode="dialog" />
+	
+	<org.xzc.msg.ui.view.MyTimeRangeSelector
+		android:id="@+id/mtrs_createTime"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		/>
+		<org.xzc.msg.ui.view.MyTimeRangeSelector
+		android:id="@+id/mtrs_startTime"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		/>
+			<org.xzc.msg.ui.view.MyTimeRangeSelector
+		android:id="@+id/mtrs_endTime"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		/>
+
+</LinearLayout>

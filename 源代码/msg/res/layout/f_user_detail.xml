@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	style="@style/MyPadding"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical" >
+
+	<TableLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:stretchColumns="2" >
+
+		<TableRow style="@style/TableRow" >
+
+			<TextView
+				style="@style/Label"
+				android:text="用户名" />
+
+			<View style="@style/HDivider" />
+
+			<TextView
+				android:id="@+id/tv_name"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/loading" />
+		</TableRow>
+
+		<TableRow style="@style/TableRow" >
+
+			<TextView
+				style="@style/Label"
+				android:text="手机" />
+
+			<View style="@style/HDivider" />
+
+			<TextView
+				android:id="@+id/tv_phone"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/loading" />
+		</TableRow>
+
+		<TableRow style="@style/TableRow" >
+
+			<TextView
+				style="@style/Label"
+				android:text="QQ" />
+
+			<View style="@style/HDivider" />
+
+			<TextView
+				android:id="@+id/tv_qq"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/loading" />
+		</TableRow>
+
+		<TableRow style="@style/TableRow" >
+
+			<TextView
+				style="@style/Label"
+				android:text="微信" />
+
+			<View style="@style/HDivider" />
+
+			<TextView
+				android:id="@+id/tv_weixin"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/loading" />
+		</TableRow>
+
+		<TableRow style="@style/TableRow" >
+
+			<TextView
+				style="@style/Label"
+				android:text="发布过的消息数" />
+
+			<View style="@style/HDivider" />
+
+			<TextView
+				android:id="@+id/tv_publishMessageCount"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/loading" />
+
+			<Button
+				android:id="@+id/btn_view_messages"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="查看" 
+				/>
+		</TableRow>
+	</TableLayout>
+
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:text="描述"
+		android:textSize="18sp" />
+
+	<TextView
+		android:id="@+id/tv_desc"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="@string/loading" />
+
+</LinearLayout>

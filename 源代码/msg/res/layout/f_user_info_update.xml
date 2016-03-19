@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent" >
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical" >
+
+		<TableLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:stretchColumns="1" >
+
+			<TableRow
+				android:id="@+id/tableRow1"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content" >
+
+				<TextView
+					style="@style/Label"
+					android:text="名称" />
+
+				<TextView
+					android:id="@+id/tv_name"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/loading" />
+			</TableRow>
+
+			<TableRow
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" >
+
+				<TextView
+					style="@style/Label"
+					android:text="手机" />
+
+				<EditText
+					android:id="@+id/et_phone"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:ems="10"
+					android:inputType="phone" >
+
+					<requestFocus />
+				</EditText>
+			</TableRow>
+<!-- 
+			<TableRow
+				style="@style/TableRow"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" >
+
+				<TextView
+					style="@style/Label"
+					android:text="邮箱" />
+
+				<EditText
+					android:id="@+id/et_email"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:ems="10"
+					android:inputType="textEmailAddress" >
+
+					<requestFocus />
+				</EditText>
+			</TableRow>
+ -->
+			<TableRow
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" >
+
+				<TextView
+					style="@style/Label"
+					android:text="QQ" />
+
+				<EditText
+					android:id="@+id/et_qq"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:inputType="number"
+					android:maxLength="11" />
+			</TableRow>
+
+			<TableRow
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" >
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center"
+					android:text="微信" />
+
+				<EditText
+					android:id="@+id/et_weixin"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:ems="10" />
+			</TableRow>
+
+			<TableRow
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content" >
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="密码修改" />
+
+				<ToggleButton
+					android:id="@+id/tb_password"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:text="密码修改" />
+			</TableRow>
+
+			<TableRow
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:visibility="gone" >
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center"
+					android:text="旧密码" />
+
+				<EditText
+					android:id="@+id/et_old_password"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:ems="10"
+					android:inputType="textPassword" />
+			</TableRow>
+
+			<TableRow
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:visibility="gone" >
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center"
+					android:text="新密码" />
+
+				<EditText
+					android:id="@+id/et_new_password"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:ems="10"
+					android:inputType="textPassword" />
+			</TableRow>
+		</TableLayout>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="描述" />
+
+		<EditText
+			android:id="@+id/et_desc"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1"
+			android:ems="10"
+			android:gravity="top"
+			android:inputType="textMultiLine"
+			android:minHeight="200dp" />
+
+		<Button
+			android:id="@+id/btn_submit"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:enabled="false"
+			android:text="提交修改" />
+	</LinearLayout>
+
+</ScrollView>

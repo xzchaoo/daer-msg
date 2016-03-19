@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.configuration.xml.reload" value="true" />
+	<constant name="struts.i18n.reload" value="true" />
+	
+	<!-- 先把rest删除了
+	<constant name="struts.action.extension" value=",,json,action" />
+	<constant name="struts.mapper.class" value="org.apache.struts2.dispatcher.mapper.PrefixBasedActionMapper" />
+	<constant name="struts.mapper.prefixMapping" value="/rest:rest,:struts" />
+	<constant name="struts.rest.namespace" value="/rest" />
+	<constant name="struts.rest.defaultExtension" value="json" />
+-->
+	<package name="my-json-default" extends="json-default">
+		<interceptors>
+			<interceptor name="MyJSONSupportInterceptor" class="org.xzc.msg.interceptor.MyJSONSupportInterceptor" />
+			<interceptor-stack name="my-json-stack">
+				<interceptor-ref name="defaultStack" />
+				<interceptor-ref name="MyJSONSupportInterceptor" />
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="my-json-stack" />
+		<global-results>
+			<result name="success" type="json">
+				<param name="root">json</param>
+				<param name="encoding">utf-8</param>
+				<param name="ignoreHierarchy">false</param>
+			</result>
+
+			<!-- 处理得不算好 -->
+			<result name="exception" type="json">
+				<param name="root">json</param>
+				<param name="encoding">utf-8</param>
+				<param name="ignoreHierarchy">false</param>
+			</result>
+		</global-results>
+
+		<!-- 错误处理要做好 否则丢了很多异常消息
+			<global-exception-mappings>
+			<exception-mapping result="exception" exception="java.lang.Exception"></exception-mapping>
+			</global-exception-mappings>
+		-->
+	</package>
+
+	<package name="api2-msg" namespace="/api2/msg" extends="my-json-default">
+		<default-class-ref class="org.xzc.msg.action.MessageAction" />
+		<action name="byid" method="byid" />
+		<action name="list" method="list" />
+		<action name="add" method="add" />
+		<action name="delete" method="delete" />
+	</package>
+
+	<package name="api2-user" namespace="/api2/user" extends="my-json-default">
+		<default-class-ref class="org.xzc.msg.action.UserAction" />
+		<action name="register" method="register" />
+		<action name="update" method="update" />
+		<action name="listUsers" method="listUsers" />
+		<action name="simpleInfo" method="simpleInfo" />
+		<action name="state" method="state" />
+		<action name="login" method="login" />
+		<action name="logout" method="logout" />
+		<action name="detail" method="detail" />
+	</package>
+	
+	<package name="api2-user-message" namespace="/api2/um" extends="my-json-default">
+		<default-class-ref class="org.xzc.msg.action.UserMessageAction" />
+		<action name="list" method="list" />
+		<action name="add" method="add" />
+		<action name="delete" method="delete" />
+		<action name="listAll" method="listAll" />
+		<action name="deleteAll" method="deleteAll" />
+		<action name="publishMessageToGroup" method="publishMessageToGroup" />
+	</package>
+
+	<package name="api2-group" namespace="/api2/group" extends="my-json-default">
+		<default-class-ref class="org.xzc.msg.action.GroupAction" />
+		<action name="add" method="add" />
+		<action name="byid" method="byid" />
+		<action name="list" method="list" />
+		<action name="listUsersInGroup" method="listUsersInGroup" />
+		<action name="addUserToGroup" method="addUserToGroup" />
+		<action name="removeUserFromGroup" method="removeUserFromGroup" />
+		<action name="fullInfo" method="fullInfo" />
+		<action name="isUserJoinGroup" method="isUserJoinGroup" />
+	</package>
+	
+	<package name="api2-schedule" namespace="/api2/schedule" extends="my-json-default">
+		<default-class-ref class="org.xzc.msg.action.ScheduleAction" />
+		<action name="tongqu" method="tongqu" />
+		<action name="sjtujwc" method="sjtujwc" />
+	</package>
+
+
+	<!-- <package name="rest1" namespace="/rest" extends="rest-default">
+		<action name="user" class="org.xzc.action.UserController" />
+		<action name="buildings" class="org.xzc.action.BuildingController" />
+		<action name="users-buildings" class="org.xzc.action.BuildingController" />
+		</package>
+	-->
+	<package name="test" namespace="/test" extends="my-json-default">
+		<default-class-ref class="org.xzc.msg.action.TestAction" />
+		<action name="*" method="{1}" />
+	</package>
+	<package name="repair" namespace="/repair" extends="my-json-default">
+		<default-class-ref class="org.xzc.msg.action.RepairAction"/>
+		<action name="*" method="{1}"/>
+	</package>
+	
+</struts>

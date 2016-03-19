@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 4.0//EN"
+        "http://www.tuckey.org/res/dtds/urlrewrite4.0.dtd">
+<urlrewrite>
+
+	<!--
+		<rule>
+		<from>^/login(.*)\.html$</from>
+		<to>/login$1</to>
+		</rule>
+	-->
+	<rule match-type="wildcard">
+		<name>随便起个名字 无所谓的</name>
+		<note>我是解释</note>
+		<from>/login*.html</from>
+		<to type="redirect">/ssh2/login$1?name=$1</to>
+	</rule>
+	<!-- **可以匹配/ 而单个*只能匹配单词 -->
+	<rule match-type="wildcard">
+		<!-- <condition name="user-agent">Mozilla/3\.0 (compatible; AvantGo .*)</condition> -->
+		<from>/a/**</from>
+		<!-- set name="client">AvantGo</set>
+			set里也可以使用$1
+		-->
+		<!-- request.setAttribute("aaa","bbb") -->
+		<set type="request" name="aaa">bbb</set>
+		<to type="redirect">/ssh2/b/$1</to>
+	</rule>
+	<rule match-type="regex">
+		<from>^/g(.+)$</from>
+		<set type="status">302</set>
+		<to>/aa.jsp</to>
+	</rule>
+	
+	<rule>
+	
+	</rule>
+</urlrewrite>

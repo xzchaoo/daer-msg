@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 4.0//EN"
+        "http://www.tuckey.org/res/dtds/urlrewrite4.0.dtd">
+<urlrewrite>
+
+	<rule>
+		<from>^/rest/users/(\d+)/buildings(/\d+)?$</from>
+		<set type="parameter" name="userid">$1</set>
+		<to>/rest/users-buildings$2</to>
+	</rule>
+
+</urlrewrite>

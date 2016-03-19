@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string name="app_name">msg</string>
+	<string name="hello_world">Hello world!</string>
+
+	<string-array name="msg_types">
+		<item>全部</item>
+		<item>个人</item>
+		<item>同去网</item>
+		<item>交大教务处</item>
+	</string-array>
+
+	<integer-array name="msg_type_values">
+		<item>0</item>
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+	</integer-array>
+
+	<string-array name="msg_bys">
+		<item>创建时间</item>
+		<item>起始时间</item>
+		<item>结束时间</item>
+	</string-array>
+	<string-array name="msg_by_values">
+		<item>createTime</item>
+		<item>startTime</item>
+		<item>endTime</item>
+	</string-array>
+	<string-array name="msg_orders">
+		<item>降序</item>
+		<item>升序</item>
+	</string-array>
+
+	<integer-array name="msg_order_values">
+		<item>-1</item>
+		<item>1</item>
+	</integer-array>
+
+	<string name="loading">加载中\.\.\.</string>
+	<string name="invalid_user_name_prompt">账号长度必须介于3-16之间,且只能使用大小写字母,数字和下划线.</string>
+	<string name="invalid_user_password_prompt">密码长度必须介于6-16之间,且只能使用大小写字母,数字和下划线.</string>
+	<string name="loginning_prompt">正在登陆...</string>
+	<string name="login_success_prompt">登陆成功</string>
+
+	<string-array name="prefs_timeout">
+		<item>1秒</item>
+		<item>2秒</item>
+		<item>5秒</item>
+		<item>10秒</item>
+	</string-array>
+	<string-array name="prefs_timeout_values">
+			<item>1000</item>
+			<item>2000</item>
+			<item>5000</item>
+			<item>10000</item>
+	</string-array>
+	
+	<string-array name="prefs_retry">
+		<item>1次</item>
+		<item>2次</item>
+		<item>3次</item>
+		<item>4次</item>
+		<item>5次</item>
+	</string-array>
+	<string-array name="prefs_retry_values">
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+		<item>4</item>
+		<item>5</item>
+	</string-array>
+	
+	<string name="msg_type_prompt">消息类型</string>
+	
+	<string name="help">
+		1.消息市场\n
+			消息市场里放的是各式各样的消息,目前主要有3个来源:个人,交大教务处和同去网.在这个页面里可以进行对信息和筛选,还可以发布一条个人消息.
+			发布消息的时候可以选择"发布到群组".\n
+		2.群组\n
+			所有人都可以建立群组,群组目前的内容很简单只有一个名字和描述即可创建.同样在群组页面,可以查看群组的信息和筛选,还可以创建一个群组.
+			查看某个群组的详细信息时,可以加入或退出这个群组.\n
+		3.我的消息\n
+			当你加入了某个群组,并且这个群组的群主发布了一条消息到群组里,那么你就可以在"我的消息"页面看到这条消息.\n
+		4.侧滑菜单\n
+			使用侧滑手势可以打开侧滑菜单.侧滑菜单目前包括个人中心,注销,设置等功能.\n
+		</string>
+</resources>

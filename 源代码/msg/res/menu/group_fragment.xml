@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+	
+	<item
+		android:id="@+id/refresh"
+		android:icon="@drawable/ic_refresh_white_36dp"
+		android:showAsAction="always"
+		android:title="刷新"/>
+	<item
+		android:id="@+id/add"
+		android:icon="@drawable/ic_plus_one_white_36dp"
+		android:showAsAction="always"
+		android:title="发布消息"/>
+	
+</menu>

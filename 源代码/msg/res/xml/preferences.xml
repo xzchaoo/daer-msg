@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+	<PreferenceScreen android:title="网络设置"
+		>
+		<CheckBoxPreference
+			android:defaultValue="true"
+			android:key="auto_login"
+			android:summaryOff="关闭"
+			android:summaryOn="开启"
+			android:title="自动登录" />
+		<CheckBoxPreference
+			android:defaultValue="true"
+			android:key="remember_last_username"
+			android:summaryOff="不保存"
+			android:summaryOn="保存"
+			android:title="保存上次登录的用户名" />
+
+		<ListPreference
+			android:defaultValue="1000"
+			android:entries="@array/prefs_timeout"
+			android:entryValues="@array/prefs_timeout_values"
+			android:key="timeout"
+			android:title="超时" />
+		<ListPreference
+			android:defaultValue="1"
+			android:entries="@array/prefs_retry"
+			android:entryValues="@array/prefs_retry_values"
+			android:key="retry"
+			android:title="自动重试" />
+	</PreferenceScreen>
+
+	<PreferenceCategory android:title="关于" >
+		<Preference android:title="谢谢支持..." >
+
+			<!--
+     		<intent
+			android:action="android.intent.action.VIEW"
+			android:data="http://www.example.com" />
+			-->
+		</Preference>
+	</PreferenceCategory>
+
+</PreferenceScreen>

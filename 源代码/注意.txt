@@ -1,0 +1,14 @@
+ssh2 服务端项目
+zhuanquceshi 主要用于从各个网站抓取消息
+msg-domain 里面存放了各种实体类
+msg Android项目
+
+此外项目还依赖于若干个开源项目
+在这里列出来
+xUtils
+SlidingMenu
+ViewPagerIndicator
+Android-PullToRefresh
+datetimepicker
+android-saripaar
+全部都可以在github上直接搜索到

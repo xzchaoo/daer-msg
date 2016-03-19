@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:ptr="http://schemas.android.com/apk/res-auto"
+	xmlns:swipe="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical" >
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal" >
+
+		<Spinner
+			android:id="@+id/sp_by"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:entries="@array/msg_bys" />
+
+		<Spinner
+			android:id="@+id/sp_order"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:entries="@array/msg_orders" />
+
+		<CheckBox
+			android:id="@+id/cb_my_create_group"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:text="我创建的群组" />
+	</LinearLayout>
+
+	<SearchView
+		android:id="@+id/sv_keyword"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:queryHint="关键字" />
+
+	<com.handmark.pulltorefresh.library.PullToRefreshListView
+		android:id="@+id/ptrlv"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		ptr:ptrMode="pullFromStart" />
+
+</LinearLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="#fff" >
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical" >
+
+		<TableLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:stretchColumns="2" >
+
+			<TableRow style="@style/TableRow" >
+
+				<TextView
+					style="@style/Label"
+					android:text="创建者" />
+
+				<View style="@style/HDivider" />
+
+				<TextView
+					android:id="@+id/tv_creator"
+					style="@style/TV_UserName"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content" />
+			</TableRow>
+
+			<TableRow style="@style/TableRow" >
+
+				<TextView
+					style="@style/Label"
+					android:text="标题" />
+
+				<View style="@style/HDivider" />
+
+				<TextView
+					android:id="@+id/tv_name"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="加载中..." />
+			</TableRow>
+
+			<TableRow style="@style/TableRow" >
+
+				<TextView
+					style="@style/Label"
+					android:text="创建时间" />
+
+				<View style="@style/HDivider" />
+
+				<TextView
+					android:id="@+id/tv_createTime"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="加载中..." />
+			</TableRow>
+
+			<TableRow style="@style/TableRow" >
+
+				<TextView
+					style="@style/Label"
+					android:text="地点" />
+
+				<View style="@style/HDivider" />
+
+				<TextView
+					android:id="@+id/tv_location"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="加载中..." />
+			</TableRow>
+
+			<TableRow style="@style/TableRow" >
+
+				<TextView
+					style="@style/Label"
+					android:text="起始时间" />
+
+				<View style="@style/HDivider" />
+
+				<TextView
+					android:id="@+id/tv_startTime"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="加载中..." />
+			</TableRow>
+
+			<TableRow style="@style/TableRow" >
+
+				<TextView
+					style="@style/Label"
+					android:text="结束时间" />
+
+				<View style="@style/HDivider" />
+
+				<TextView
+					android:id="@+id/tv_endTime"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="加载中..." />
+			</TableRow>
+		</TableLayout>
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:textSize="18sp"
+			android:text="内容" />
+
+		<TextView
+			android:id="@+id/tv_content"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:text="加载中..." />
+	</LinearLayout>
+
+</ScrollView>

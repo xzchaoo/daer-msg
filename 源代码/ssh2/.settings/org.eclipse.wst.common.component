@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="ssh2">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/config"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/desc"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src-struts2-json-plugin"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/test"/>
+        <dependent-module archiveName="zhuaquceshi.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/zhuaquceshi/zhuaquceshi">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="msg-domain.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/msg-domain/msg-domain">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="ssh2"/>
+        <property name="java-output-path" value="/ssh2/build/classes"/>
+    </wb-module>
+</project-modules>

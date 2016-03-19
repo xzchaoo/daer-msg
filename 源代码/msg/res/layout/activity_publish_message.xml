@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical" >
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" >
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="标题" />
+
+		<EditText
+			android:id="@+id/et_name"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:ems="10" >
+
+			<requestFocus />
+		</EditText>
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal" >
+
+		<CheckBox
+			android:id="@+id/cb_startTime"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="起始时间" />
+
+		<TextView
+			android:id="@+id/tv_startTime"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="15dp"
+			android:enabled="false" />
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal" >
+
+		<CheckBox
+			android:id="@+id/cb_endTime"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="结束时间" />
+
+		<TextView
+			android:id="@+id/tv_endTime"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="15dp"
+			android:enabled="false" />
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal" >
+
+		<CheckBox
+			android:id="@+id/cb_location"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="地点" />
+
+		<EditText
+			android:id="@+id/et_location"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="15dp"
+			android:enabled="false"
+			android:singleLine="true" />
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal" >
+
+		<CheckBox
+			android:id="@+id/cb_group"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="发布到组" />
+
+		<TextView
+			android:id="@+id/tv_group"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="15dp"
+			android:layout_weight="1"
+			android:enabled="false"
+			android:singleLine="true" />
+
+		<Button
+			android:id="@+id/btn_select_group"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="选择组"
+			android:enabled="false" />
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1"
+		android:orientation="vertical" >
+
+		<TextView
+			android:id="@+id/tv_content"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="内容" />
+
+		<EditText
+			android:id="@+id/et_content"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:ems="10"
+			android:gravity="top"
+			android:text="我是文字" />
+	</LinearLayout>
+
+	<Button
+		android:id="@+id/publish"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="发布" />
+
+</LinearLayout>
